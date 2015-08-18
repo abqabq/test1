@@ -1,8 +1,8 @@
 class Solution {
 public:
   static Solution* getInstance() {
-    static Solution *sol = new Solution();
-    return sol;
+    static Solution sol;
+    return &sol;
   }
 
 private:
@@ -32,6 +32,5 @@ public:
       }
       Unlock();
     }
-    return instance;
   }
 }
